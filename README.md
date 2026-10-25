@@ -20,7 +20,7 @@ Dockerfile 保留官方 apt 源，仅补充同一 trixie 发行版的 non-free �
 
 ## 自动构建
 
-`.github/workflows/image.yml` 每 6 小时（UTC 00:23、06:23、12:23、18:23）检查一次；GitHub 调度可能延迟。main 上构建文件变化及手动运行也触发检查。
+`.github/workflows/image.yml` 每周一 UTC 00:23（北京时间 08:23）检查一次；GitHub 调度可能延迟。main 上构建文件变化及手动运行也触发检查。
 
 1. 解析官方 latest 的 manifest digest。
 2. 将 digest、平台、Dockerfile、.dockerignore、scripts 和 workflow 内容计算为 build key。
